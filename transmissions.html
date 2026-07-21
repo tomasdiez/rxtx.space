@@ -1,0 +1,31 @@
+---
+layout: default
+title: Transmissions
+description: "Numbered essays in progress — thinking in public from the RXTX bench in Bali."
+permalink: /transmissions/
+---
+<section class="page-head container">
+  <p class="kicker">CH.01 · Transmissions</p>
+  <h1 class="page-title">The log</h1>
+  <p class="page-dek">Essays in progress: numbered, dated, transmitted before they're comfortable. The ones that survive graduate to <a href="https://www.tomasdiez.com">the record</a>; the rest stay here as evidence.</p>
+</section>
+
+<section class="container log">
+  {% assign txs = site.transmissions | sort: "date" | reverse %}
+  {% assign count = txs | size %}
+  {% assign oldest = txs | last %}
+  <p class="log-meta">Log · {{ count }} {% if count == 1 %}entry{% else %}entries{% endif %} · since {{ oldest.date | date: "%Y" }}</p>
+
+  <div class="tx-list">
+    {% for t in txs %}
+    <a class="tx-row" href="{{ t.url | relative_url }}">
+      <span class="tx-id">TX-{{ t.tx }}</span>
+      <time datetime="{{ t.date | date: '%Y-%m-%d' }}">{{ t.date | date: "%Y.%m.%d" }}</time>
+      <span class="tx-row-title">{{ t.title }}{% if t.dek %}<span class="row-dek">{{ t.dek }}</span>{% endif %}</span>
+      <span class="tx-row-arrow" aria-hidden="true">&rarr;</span>
+    </a>
+    {% endfor %}
+  </div>
+
+  <p class="log-pending"><span class="cursor" aria-hidden="true">&#9608;</span> Next transmission: unscheduled. <a href="{{ '/transmissions.xml' | relative_url }}">The feed hears it first</a>.</p>
+</section>

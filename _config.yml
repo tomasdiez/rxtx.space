@@ -1,0 +1,56 @@
+# RXTX — rxtx.space
+# Built for the native GitHub Pages Jekyll pipeline (Jekyll 3.10, whitelisted plugins only).
+
+title: RXTX
+tagline: receive / transmit
+description: >-
+  RXTX is the experimental studio of Tomas Diez — transmissions, sound,
+  and experiments, made in Bali and wired to everywhere.
+url: "https://rxtx.space"
+baseurl: ""
+lang: en
+timezone: Asia/Makassar # Bali runs on WITA, UTC+8
+
+author:
+  name: Tomas Diez
+  email: hola@rxtx.space
+
+# Used by jekyll-seo-tag for structured data.
+social:
+  name: Tomas Diez
+  links:
+    - https://www.instagram.com/tomasdiez
+    - https://github.com/tomasdiez
+    - https://www.tomasdiez.com
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+
+collections:
+  transmissions:
+    output: true
+    permalink: /transmissions/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: transmissions
+    values:
+      layout: transmission
+
+# jekyll-feed: publish the Transmissions collection at /transmissions.xml
+feed:
+  collections:
+    transmissions:
+      path: "/transmissions.xml"
+
+markdown: kramdown
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .jekyll-cache

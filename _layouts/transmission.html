@@ -1,0 +1,29 @@
+---
+layout: default
+---
+<article class="tx-article">
+  <header class="page-head container">
+    <p class="kicker">CH.01 · Transmission log</p>
+    <div class="tx-meta">
+      <span class="tx-badge">TX-{{ page.tx }}</span>
+      <time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: "%Y.%m.%d" }}</time>
+      <span>{{ content | number_of_words }} words</span>
+    </div>
+    <h1 class="page-title">{{ page.title }}</h1>
+    {% if page.dek %}<p class="page-dek">{{ page.dek }}</p>{% endif %}
+  </header>
+
+  <div class="container">
+    <div class="prose">
+{{ content }}
+    </div>
+
+    <footer class="tx-end">
+      <p class="endmark"><span>// End of transmission TX-{{ page.tx }}</span></p>
+      <p class="tx-back">
+        <a href="{{ '/transmissions/' | relative_url }}">&larr; All transmissions</a>
+        <a href="{{ '/transmissions.xml' | relative_url }}">RSS</a>
+      </p>
+    </footer>
+  </div>
+</article>

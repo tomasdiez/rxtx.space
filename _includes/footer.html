@@ -1,0 +1,41 @@
+<footer class="site-foot">
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-col">
+        <h2 class="foot-label">Studio</h2>
+        <p>
+          <a href="mailto:hola@rxtx.space">hola@rxtx.space</a><br>
+          Bali, Indonesia
+        </p>
+      </div>
+      <div class="foot-col">
+        <h2 class="foot-label">Channels</h2>
+        <ul class="foot-list">
+          <li><a href="https://www.instagram.com/tomasdiez">Instagram</a></li>
+          <li><a href="https://github.com/tomasdiez">GitHub</a></li>
+          <li><a href="{{ '/transmissions.xml' | relative_url }}">RSS — Transmissions</a></li>
+        </ul>
+        <!-- TODO-TOMAS: bandcamp/soundcloud profile URLs -->
+      </div>
+      <div class="foot-col">
+        <h2 class="foot-label">The record</h2>
+        <p>
+          What graduates from this bench — projects, research, publications —
+          lives at <a href="https://www.tomasdiez.com">tomasdiez.com</a>.
+        </p>
+      </div>
+    </div>
+    <div class="foot-console">
+      <span class="pulse-dot" aria-hidden="true"></span>
+      <span>On air</span>
+      <span aria-hidden="true">·</span>
+      <span>08.8°S 115.1°E</span>
+      <span aria-hidden="true">·</span>
+      <span id="studio-clock" aria-hidden="true">UTC+8</span>
+      <span aria-hidden="true">·</span>
+      <span>No analytics — all signal</span>
+      <span aria-hidden="true">·</span>
+      <span>&copy; {{ site.time | date: "%Y" }} Tomas Diez</span>
+    </div>
+  </div>
+</footer>

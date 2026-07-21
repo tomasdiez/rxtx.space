@@ -1,0 +1,46 @@
+---
+layout: default
+title: Experiments
+description: "Prototypes and art from the RXTX bench — numbered, dated when possible, honest about status."
+permalink: /experiments/
+---
+<section class="page-head container">
+  <p class="kicker">CH.03 · Experiments</p>
+  <h1 class="page-title">The bench</h1>
+  <p class="page-dek">Experiments are how this studio thinks with its hands. Each one gets a number, a status, and no promises.</p>
+</section>
+
+<section class="container">
+  <!-- TODO-TOMAS: add experiments -->
+  <div class="exp-grid">
+    {% for exp in site.data.experiments %}
+    <article class="exp-card">
+      <header class="exp-head">
+        <span class="exp-id">{{ exp.id }}</span>
+        <span class="status status--{{ exp.status | downcase }}">{{ exp.status | upcase }}{% if exp.year %} · {{ exp.year }}{% endif %}</span>
+      </header>
+      <h2 class="exp-title">{{ exp.title }}</h2>
+      <p class="exp-desc">{{ exp.description }}</p>
+      {% if exp.link %}
+      <p class="exp-link">
+        {% if exp.link.url contains '://' %}
+        <a href="{{ exp.link.url }}">{{ exp.link.label }} &rarr;</a>
+        {% else %}
+        <a href="{{ exp.link.url | relative_url }}">{{ exp.link.label }} &rarr;</a>
+        {% endif %}
+      </p>
+      {% endif %}
+    </article>
+    {% endfor %}
+
+    {% assign expcount = site.data.experiments | size %}
+    {% for i in (1..2) %}
+    {% assign n = expcount | plus: forloop.index %}
+    {% assign pad = n | prepend: "00" | slice: -3, 3 %}
+    <div class="exp-card exp-card--empty">
+      <span class="exp-id">EXP-{{ pad }}</span>
+      <span class="exp-await">Awaiting signal</span>
+    </div>
+    {% endfor %}
+  </div>
+</section>

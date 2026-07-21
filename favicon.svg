@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- RXTX transmit glyph: receive meets transmit -->
+  <rect width="64" height="64" rx="14" fill="#0f0c0a"/>
+  <path fill="#ff5c00" d="M10 20l20 12-20 12zM54 20L34 32l20 12z"/>
+</svg>

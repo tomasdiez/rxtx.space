@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#0f0c0a">
+  {% seo %}
+  <link rel="icon" type="image/svg+xml" href="{{ '/favicon.svg' | relative_url }}">
+  <link rel="alternate" type="application/atom+xml" title="RXTX — Transmissions" href="{{ '/transmissions.xml' | relative_url }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=Space+Grotesk:wght@400;500;700&amp;display=swap">
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  {% include header.html %}
+  <main id="main">
+{{ content }}
+  </main>
+  {% include footer.html %}
+  <script>
+    // Studio clock. Bali runs on WITA (UTC+8). Decorative — falls back to a static label without JS.
+    (function () {
+      var el = document.getElementById("studio-clock");
+      if (!el || !window.Intl || !Intl.DateTimeFormat) { return; }
+      var fmt;
+      try {
+        fmt = new Intl.DateTimeFormat("en-GB", {
+          timeZone: "Asia/Makassar",
+          hour: "2-digit", minute: "2-digit", second: "2-digit",
+          hour12: false
+        });
+      } catch (e) { return; }
+      function tick() { el.textContent = fmt.format(new Date()) + " WITA"; }
+      tick();
+      window.setInterval(tick, 1000);
+    })();
+  </script>
+</body>
+</html>

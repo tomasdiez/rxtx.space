@@ -1,0 +1,24 @@
+# Experiments shown on /experiments/, newest first.
+# TODO-TOMAS: add experiments — copy a block below, give it the next EXP number.
+#
+# Fields:
+#   id           EXP-XXX (three digits, next in sequence)
+#   title        short name
+#   status       live | ongoing | dormant | dead — say the truth
+#   year         optional, e.g. "2026"
+#   description  one to three sentences
+#   link         optional: url (internal starts with /, external with https://) + label
+
+- id: "EXP-002"
+  title: "TX live sets"
+  status: "ongoing"
+  description: "Improvised hardware/software sets, played live in Bali. No fixed tracklist — the room decides."
+  link:
+    url: "/sound/"
+    label: "Tune in on the Sound page"
+
+- id: "EXP-001"
+  title: "This website"
+  status: "live"
+  year: "2026"
+  description: "An experiment in owning the antenna: static files, a domain, and email, for next to nothing a year. No platform between the studio and whoever is listening. You're looking at it."

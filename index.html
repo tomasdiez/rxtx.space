@@ -1,0 +1,68 @@
+---
+layout: default
+---
+<section class="hero container">
+  <p class="kicker">Experimental studio · Tomas Diez · Bali, Indonesia</p>
+  <h1 class="hero-title"><span class="hx">RX</span> is receive.<br><span class="hx">TX</span> is transmit.</h1>
+
+  <div class="wave" aria-hidden="true">
+    <div class="wave-screen">
+      <svg viewBox="0 0 600 100" preserveAspectRatio="none" focusable="false">
+        {%- for i in (0..59) -%}
+          {%- assign a = i | times: 47 | modulo: 61 -%}
+          {%- assign b = i | times: 31 | modulo: 37 -%}
+          {%- assign h = a | plus: b | modulo: 72 | plus: 10 -%}
+          {%- assign rem = 100 | minus: h -%}
+          {%- assign y = rem | divided_by: 2 -%}
+          {%- assign x = i | times: 10 -%}
+          <rect x="{{ x }}" y="{{ y }}" width="5" height="{{ h }}"></rect>
+        {%- endfor -%}
+      </svg>
+      <span class="wave-scan"></span>
+    </div>
+    <div class="dial">
+      <span>88</span><span>92</span><span>96</span><span>100</span><span>104</span><span>108 MHz</span>
+    </div>
+  </div>
+
+  <div class="prose manifesto">
+    <p>Radio people have trusted those two abbreviations for a century. Everything in this studio runs on the same two moves: take signal in, put signal out, be honest about the noise.</p>
+
+    <p>RXTX is not a portfolio. Portfolios are for finished things, and almost nothing here is finished. This is where I work out loud — music, design, art, changemaking — before any of it hardens into canon.</p>
+
+    <p>I grew up in Venezuela, spent years in Barcelona, and set up this bench in Uluwatu, Bali. Made from Bali, wired to everywhere.</p>
+
+    <p>This is a studio for the age of crisis. Institutions answer crisis with reports; a studio can answer with attempts — small, cheap, transmitted early, corrected in public. Some attempts will fail on air. Better that than dying in a drawer.</p>
+
+    <p><strong>If you can read this, you're in range.</strong></p>
+  </div>
+</section>
+
+<section class="container">
+  <nav class="doorways" aria-label="Channels">
+    <a class="door" href="{{ '/transmissions/' | relative_url }}">
+      <span class="door-id">CH.01</span>
+      <span class="door-body">
+        <span class="door-name">Transmissions</span>
+        <span class="door-dek">Essays in progress, numbered like a logbook.</span>
+      </span>
+      <span class="door-arrow" aria-hidden="true">&rarr;</span>
+    </a>
+    <a class="door" href="{{ '/sound/' | relative_url }}">
+      <span class="door-id">CH.02</span>
+      <span class="door-body">
+        <span class="door-name">Sound</span>
+        <span class="door-dek">From a grunge band in Venezuela to live sets in Bali.</span>
+      </span>
+      <span class="door-arrow" aria-hidden="true">&rarr;</span>
+    </a>
+    <a class="door" href="{{ '/experiments/' | relative_url }}">
+      <span class="door-id">CH.03</span>
+      <span class="door-body">
+        <span class="door-name">Experiments</span>
+        <span class="door-dek">Prototypes and art from the bench, honest about their status.</span>
+      </span>
+      <span class="door-arrow" aria-hidden="true">&rarr;</span>
+    </a>
+  </nav>
+</section>
