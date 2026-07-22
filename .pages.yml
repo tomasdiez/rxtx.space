@@ -1,0 +1,53 @@
+# PagesCMS schema for rxtx.space
+# Lives at the repo root as .pages.yml
+# Visual editor at app.pagescms.org for Transmissions and Experiments.
+# Docs: https://pagescms.org/docs/
+
+media:
+  input: assets/img          # where uploaded images are stored in the repo
+  output: /assets/img        # the path used in the built site
+
+content:
+  # ---- Transmissions → _transmissions/*.md ----
+  # New files are named tx-<TX number>-<slug>.md automatically.
+  # TX numbering is sequential: check the log for the latest number first.
+  - name: transmissions
+    label: Transmissions
+    type: collection
+    path: _transmissions
+    filename: "tx-{tx}-{primary}.md"
+    view:
+      primary: title
+      sort: date
+      order: desc
+    fields:
+      - { name: title, label: Title, type: string, required: true }
+      - { name: dek, label: Dek (one line under the title), type: string }
+      - { name: description, label: Description (SEO / link previews), type: text }
+      - { name: tx, label: TX number (3 digits, e.g. 002), type: string, required: true, pattern: '^\d{3}$' }
+      - { name: date, label: Date, type: date, required: true }
+      - { name: body, label: Body, type: rich-text }
+
+  # ---- Experiments → _data/experiments.yml ----
+  - name: experiments
+    label: Experiments
+    type: file
+    path: _data/experiments.yml
+    list: true
+    fields:
+      - { name: id, label: ID (EXP-XXX), type: string, required: true }
+      - { name: title, label: Title, type: string, required: true }
+      - name: status
+        label: Status
+        type: select
+        options:
+          values: [live, ongoing, dormant, dead]   # say the truth
+        default: ongoing
+      - { name: year, label: Year, type: string }
+      - { name: description, label: Description (1-3 sentences), type: text }
+      - name: link
+        label: Link
+        type: object
+        fields:
+          - { name: url, label: URL (/internal or https://), type: string }
+          - { name: label, label: Link text, type: string }
