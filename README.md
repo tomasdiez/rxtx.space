@@ -20,6 +20,28 @@ bundle exec jekyll serve
 
 ## Add a Transmission
 
+Three ways, from least to most friction:
+
+### 1. PagesCMS (browser / phone)
+
+The repo has a `.pages.yml` schema. Open [app.pagescms.org](https://app.pagescms.org),
+pick this repo, and use the **Transmissions** collection — filename
+(`tx-NNN-slug.md`) is generated from the TX number and title. Check the log
+for the latest TX number first; numbering is sequential.
+
+### 2. `publish.py` from an Obsidian draft (Hermes / Claude Code / terminal)
+
+Drafts live in `Obsidian/Hermes/Transmissions/drafts/`. One command validates
+frontmatter, auto-assigns the next TX number (`tx: NEXT`), writes the file,
+commits, and pushes:
+
+```sh
+python3 ~/websites/tools/publish.py transmission path/to/draft.md
+# --dry-run to preview, --no-push to commit without pushing
+```
+
+### 3. By hand
+
 One essay = one Markdown file in `_transmissions/`. Name it after the next number in the log, e.g. `tx-002-your-slug.md`:
 
 ```markdown
