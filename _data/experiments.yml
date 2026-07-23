@@ -9,6 +9,15 @@
 #   description  one to three sentences
 #   link         optional: url (internal starts with /, external with https://) + label
 
+- id: "EXP-005"
+  title: "Fab City Index 3.0"
+  status: "ongoing"
+  year: "2026"
+  description: "The instrument that measures cities against the 2054 pledge: PITO vs DIDO, plus ρ — how fast a city turns what it learns into action. Barcelona runs on live data; Boston, Santiago and Bali are wired in with clearly labelled placeholders. Methodology v0, in review."
+  link:
+    url: "https://index.fab.city/"
+    label: "The Index"
+
 - id: "EXP-004"
   title: "PLANETAI"
   status: "ongoing"
