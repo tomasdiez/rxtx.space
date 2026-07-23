@@ -9,6 +9,15 @@
 #   description  one to three sentences
 #   link         optional: url (internal starts with /, external with https://) + label
 
+- id: "EXP-003"
+  title: "Making Sense Bali"
+  status: "ongoing"
+  year: "2026"
+  description: "Citizen-owned air quality sensing for Bali, anchored by Fab Lab Bali: open-hardware nodes built from the Indonesian supply chain (~USD 15–60), a live dashboard, and resident reports over WhatsApp. Born from the smoke after Suwung — replicated in Bali and Tangerang, more nodes deploying soon. The argument is in TX-002."
+  link:
+    url: "https://mdg-bali.github.io/makingsensebali/"
+    label: "The campaign site"
+
 - id: "EXP-002"
   title: "TX live sets"
   status: "ongoing"
