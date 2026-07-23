@@ -569,6 +569,19 @@ img, svg, iframe { max-width: 100%; }
 }
 .embed iframe { display: block; width: 100%; border: 0; }
 
+.embed-fallback {
+  margin: 0.7rem 0 0;
+  font: 400 0.78rem/1.5 var(--font-mono);
+  letter-spacing: 0.08em;
+}
+.embed-fallback a {
+  color: var(--ink-mute);
+  text-decoration: underline;
+  text-decoration-color: var(--line-strong);
+  text-underline-offset: 3px;
+}
+.embed-fallback a:hover { color: var(--accent-soft); }
+
 /* --------------------------------------------------------------------------
    Experiments: the bench
    -------------------------------------------------------------------------- */
