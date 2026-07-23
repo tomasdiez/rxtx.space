@@ -9,6 +9,15 @@
 #   description  one to three sentences
 #   link         optional: url (internal starts with /, external with https://) + label
 
+- id: "EXP-004"
+  title: "PLANETAI"
+  status: "ongoing"
+  year: "2026"
+  description: "An instrument for closing the loop between Earth observation and community-scale response: a five-tier open AI stack from planetary foundation models down to fab-lab sensor nodes, with community councils holding veto. A Fab City Foundation research initiative — Core Ideas Paper out since April, applied to the Google AI for Science Innovation Challenge in May. Graduates from the bench if the funding lands."
+  link:
+    url: "https://planetai.fab.city/"
+    label: "The instrument"
+
 - id: "EXP-003"
   title: "Making Sense Bali"
   status: "ongoing"
