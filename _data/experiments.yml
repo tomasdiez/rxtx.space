@@ -9,6 +9,15 @@
 #   description  one to three sentences
 #   link         optional: url (internal starts with /, external with https://) + label
 
+- id: "EXP-006"
+  title: "PLANETAI node"
+  status: "ongoing"
+  year: "2026"
+  description: "A computer that was headed for recycling, turned into hyperlocal climate intelligence: it reads the house's sensors, the public stations around the island and the satellites overhead, and says in one plain sentence when to shut the windows. Node #01 alive in Kuta Selatan, node #2 in Menorca; raw readings never leave the building, and its own metric is ρ — the share of alerts that made somebody act. The build diary is TX-004."
+  link:
+    url: "https://github.com/tomasdiez/planetai-node"
+    label: "The repo"
+
 - id: "EXP-005"
   title: "Fab City Index 3.0"
   status: "ongoing"
